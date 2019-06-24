@@ -1,0 +1,140 @@
+html, body {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #ebebeb;
+  background-image: url("../images/redBG.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%; }
+
+/***** The Header area that contains the editor *******/
+header {
+  width: auto;
+  padding: 5px;
+  background-color: #f1f8fc;
+  box-shadow: 0px 0px 5px 0px #808080;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; }
+
+.editor-sections {
+  border-right: 1px solid grey; }
+
+.edit-boxes-footer {
+  text-align: center;
+  border-top: 1px solid #d6d6d6;
+  width: 180px;
+  margin: auto; }
+  .edit-boxes-footer p {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 12px; }
+
+/************** END OF GLOBAL STYLES ***************************/
+/*** THE FONT SECTION ***************/
+#font-section #font-style-area {
+  width: 100px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+  #font-section #font-style-area div {
+    padding: 10px;
+    flex-grow: 1;
+    transition: .3s ease; }
+    #font-section #font-style-area div:hover {
+      background-color: #e6e6e6;
+      cursor: pointer; }
+
+/************ END OF FONT SECTION *****************/
+/*** START OF PARAGRAPH SECTION *****************/
+#paragraph-section #text-align-area {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 29px; }
+  #paragraph-section #text-align-area div {
+    text-align: center;
+    flex-grow: 1;
+    transition: .3s ease; }
+    #paragraph-section #text-align-area div:hover {
+      cursor: pointer;
+      color: #68b6e4; }
+    #paragraph-section #text-align-area div i {
+      font-size: 30px; }
+
+/************ END OF PARAGRAPH SECTION **********************/
+/*** START OF STYLES SECTION *********************/
+#styles-section {
+  height: auto; }
+  #styles-section .rows {
+    display: flex;
+    flex-direction: column; }
+  #styles-section .styles-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    #styles-section .styles-area div {
+      width: 100px;
+      height: 45px;
+      padding: 5px;
+      text-align: center;
+      background-color: white;
+      border: 1px double black;
+      border-width: 3px;
+      transition: .3s ease;
+      -webkit-transition: .3s ease; }
+      #styles-section .styles-area div:hover {
+        background-color: #e6e6e6;
+        cursor: pointer; }
+      #styles-section .styles-area div p {
+        margin: 0; }
+
+/************ END OF STYLES SECTION *************************/
+/********************************** END OF HEADER **************/
+#document-section {
+  margin-top: 20px;
+  margin-bottom: 100px;
+  width: 100%;
+  margin-top: 100px; }
+  #document-section .page {
+    width: 816px;
+    height: 1056px;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0px 0px 8px 0px #808080; }
+    #document-section .page #doc-text-area {
+      width: 100%; }
+      #document-section .page #doc-text-area textarea {
+        max-height: 961.6px;
+        width: 700px;
+        margin: 50px;
+        border: none;
+        resize: none;
+        overflow: hidden; }
+        #document-section .page #doc-text-area textarea:focus {
+          outline: none; }
+
+footer {
+  width: auto;
+  box-shadow: 0px 0px 5px 0px #808080;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  background-color: #f8f8f8; }
+  footer .page-counter-area {
+    margin-right: 150px; }
+    footer .page-counter-area p {
+      margin: 0; }
+  footer .letter-counter-area p {
+    margin: 0; }

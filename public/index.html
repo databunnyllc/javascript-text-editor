@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Documents</title>
+        <link href="../src/css/index.css" type="text/css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Aguafina+Script|Indie+Flower|Pacifico|Playfair+Display+SC|Righteous|Roboto|Rubik+Mono+One&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/9c3656a23f.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    </head>
+    <body>
+
+            <!-- The Top Area where User Can Edit Document Text -->
+        <header>
+            <!-- The Font section -->
+            <section id="font-section" class="editor-sections">
+                <div id="font-selector-area">
+                    <select>
+                        <option value="Arial" selected>Arial</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Courier">Courier</option>
+                        <option value="Comic Sans MS">Comic Sans MS</option>
+                        <option value="Aguafina Script">Aguafina Script</option>
+                        <option value="Indie Flower">Indie Flower</option>
+                        <option value="Pacifico">Pacifico</option>
+                        <option value="Playfair Display SC">Playfair Display SC</option>
+                        <option value="Righteous">Righteous</option>
+                        <option value="Roboto">Roboto</option>
+                    </select>
+                    <select>
+                        <option value="6pt">6pt</option>
+                        <option value="8pt">8pt</option>
+                        <option value="10pt">10pt</option>
+                        <option value="11pt" selected>11pt</option>
+                        <option value="12pt">12pt</option>
+                        <option value="14pt">14pt</option>
+                        <option value="18pt">18pt</option>
+                        <option value="24pt">24pt</option>
+                        <option value="30pt">36pt</option>
+                        <option value="48pt">48pt</option>
+                        <option value="60pt">60pt</option>
+                        <option value="72pt">72pt</option>
+                        <option value="80pt">80pt</option>
+                    </select>
+                </div>
+                <div id="font-style-area">
+                    <div><b>B</b></div>
+                    <div><i>I</i></div>
+                    <div><u>U</u></div>
+                </div>
+                <div class="edit-boxes-footer">
+                    <p>Font</p>
+                </div>
+            </section>
+
+
+            <!-- The Paragraph section -->
+            <section id="paragraph-section" class="editor-sections">
+                <div id="text-align-area">
+                    <div><i class="fas fa-align-left"></i></div>
+                    <div><i class="fas fa-align-center"></i></div>
+                    <div><i class="fas fa-align-right"></i></div>
+                </div>
+                <div class="edit-boxes-footer">
+                    <p>Paragraph</p>
+                </div>
+            </section>
+
+
+            <!-- The Styles/Spacing Boxes section -->
+            <section id="styles-section" class="editor-sections">
+                <div class="rows">
+                    <div class="styles-area">
+                        <div>
+                            <p>Normal</p>
+                        </div>
+                        <div>
+                            <p>No Spacing</p>
+                        </div>
+                        <div>
+                            <p>Double Spacing</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="edit-boxes-footer">
+                    <p>Styles</p>
+                </div>
+            </section>
+        </header>
+
+
+        <!-- The Actual Document Area. This is where the Sheet Resides -->
+        <section id="document-section">
+            <div class="page">
+                <div id="doc-text-area">
+                    <textarea colspan="60" rows="63" maxlength="4500"></textarea>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Footer where Pages are Counted -->
+        <footer>
+            <div class="page-counter-area">
+                <p>Page 0 of 0</p>
+            </div>
+            <div class="letter-counter-area">
+                <p>Letter Count: <span></span></p>
+            </div>
+        </footer>
+        
+        <script src="../src/js/variables.js"></script>
+        <script src="../src/js/fontEditor.js"></script>
+        <script src="../src/js/stylesEditor.js"></script>
+        <script src="../src/js/paragraphEditor.js"></script>
+        <script src="../src/js/letter-counter.js"></script>
+    </body>
+</html>
