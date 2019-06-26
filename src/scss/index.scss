@@ -122,15 +122,40 @@ header {
 }
 /************ END OF STYLES SECTION *************************/
 
+/*** START OF PRINT SECTION ******/
+#print-section {
+    .print-area {
+        display: flex;
+        justify-content: center;
+        button {
+            width: 100px;
+            border: 5px solid $printButtonBorder;
+            border-radius: 5px;
+            background-color: $printButtonBackground;
+            color: white;
+            text-align: center;
+            -moz-transition: .3s ease;
+            -webkit-transition: .3s ease;
+            transition: .3s ease;
+            &:hover {
+                cursor: pointer;
+                background-color: darkslateblue;
+            }
+            i {
+                font-size: 80px;
+            }
+        }
+    }
+}
+/****************************************************/
 /********************************** END OF HEADER **************/
 
 
 // The document area that contains the sheet
 #document-section {
-    margin-top: 20px;
     margin-bottom: 100px;
     width: 100%;
-    margin-top: 100px;
+    margin-top: 130px;
     .page {
         width: 816px;
         height: 1056px;

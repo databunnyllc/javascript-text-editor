@@ -96,12 +96,32 @@ header {
         margin: 0; }
 
 /************ END OF STYLES SECTION *************************/
+/*** START OF PRINT SECTION ******/
+#print-section .print-area {
+  display: flex;
+  justify-content: center; }
+  #print-section .print-area button {
+    width: 100px;
+    border: 5px solid #098899;
+    border-radius: 5px;
+    background-color: #09c7e0;
+    color: white;
+    text-align: center;
+    -moz-transition: .3s ease;
+    -webkit-transition: .3s ease;
+    transition: .3s ease; }
+    #print-section .print-area button:hover {
+      cursor: pointer;
+      background-color: darkslateblue; }
+    #print-section .print-area button i {
+      font-size: 80px; }
+
+/****************************************************/
 /********************************** END OF HEADER **************/
 #document-section {
-  margin-top: 20px;
   margin-bottom: 100px;
   width: 100%;
-  margin-top: 100px; }
+  margin-top: 130px; }
   #document-section .page {
     width: 816px;
     height: 1056px;

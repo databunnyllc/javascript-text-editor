@@ -1,3 +1,4 @@
+
 // Display the textarea value's length in the span.
 let display_count = () => {
     console.log("--UPDATING LETTER COUNT--");
