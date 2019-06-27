@@ -20,7 +20,8 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0; }
+  right: 0;
+  z-index: 1; }
 
 .editor-sections {
   border-right: 1px solid grey; }
@@ -129,11 +130,13 @@ header {
     background-color: white;
     box-shadow: 0px 0px 8px 0px #808080; }
     #document-section .page #doc-text-area {
-      width: 100%; }
+      max-height: 962.6px;
+      width: 700px;
+      margin: 50px;
+      position: absolute; }
       #document-section .page #doc-text-area textarea {
         max-height: 961.6px;
-        width: 700px;
-        margin: 50px;
+        width: 100%;
         border: none;
         resize: none;
         overflow: hidden; }

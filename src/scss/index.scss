@@ -23,6 +23,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;
 }
 // Global Styles for the Editor
 .editor-sections {
@@ -163,12 +164,13 @@ header {
         background-color: $documentSheet;
         box-shadow: 0px 0px 8px 0px $documentBorder;
         #doc-text-area {
-            width: 100%;
-            //border: 1px dashed red; ---For Testing
+            max-height: 962.6px;
+            width: 700px;
+            margin: 50px;
+            position: absolute;
             textarea {
                 max-height: 961.6px;
-                width: 700px;
-                margin: 50px;
+                width: 100%;
                 border: none;
                 resize: none;
                 overflow: hidden;

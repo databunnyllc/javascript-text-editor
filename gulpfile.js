@@ -22,7 +22,6 @@ gulp.task("concat", function() {
         "src/js/paragraphEditor.js",
         "src/js/stylesEditor.js",
         "src/js/printButton.js",
-        "src/js/printPreview.js",
         "src/js/letter-counter.js"
     ])
     .pipe(concat("index.js"))
