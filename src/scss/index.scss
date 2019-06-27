@@ -42,6 +42,23 @@ header {
         font-size: 12px;
     }
 }
+header .buttons {
+    width: 100px;
+    border: 5px solid $printButtonBorder;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    -moz-transition: .3s ease;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    &:hover {
+        cursor: pointer;
+        color: grey;
+    }
+    i {
+        font-size: 50px;
+    }
+}
 /************** END OF GLOBAL STYLES ***************************/
 
 
@@ -129,22 +146,16 @@ header {
         display: flex;
         justify-content: center;
         button {
-            width: 100px;
-            border: 5px solid $printButtonBorder;
-            border-radius: 5px;
             background-color: $printButtonBackground;
-            color: white;
-            text-align: center;
-            -moz-transition: .3s ease;
-            -webkit-transition: .3s ease;
-            transition: .3s ease;
-            &:hover {
-                cursor: pointer;
-                background-color: darkslateblue;
-            }
-            i {
-                font-size: 80px;
-            }
+        }
+    }
+}
+#send-section {
+    .send-area {
+        display: flex;
+        justify-content: center;
+        button {
+            background-color: $sendButtonBackground;
         }
     }
 }

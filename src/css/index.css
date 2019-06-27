@@ -37,6 +37,21 @@ header {
     font-family: sans-serif;
     font-size: 12px; }
 
+header .buttons {
+  width: 100px;
+  border: 5px solid #098899;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  -moz-transition: .3s ease;
+  -webkit-transition: .3s ease;
+  transition: .3s ease; }
+  header .buttons:hover {
+    cursor: pointer;
+    color: grey; }
+  header .buttons i {
+    font-size: 50px; }
+
 /************** END OF GLOBAL STYLES ***************************/
 /*** THE FONT SECTION ***************/
 #font-section #font-style-area {
@@ -102,20 +117,13 @@ header {
   display: flex;
   justify-content: center; }
   #print-section .print-area button {
-    width: 100px;
-    border: 5px solid #098899;
-    border-radius: 5px;
-    background-color: #09c7e0;
-    color: white;
-    text-align: center;
-    -moz-transition: .3s ease;
-    -webkit-transition: .3s ease;
-    transition: .3s ease; }
-    #print-section .print-area button:hover {
-      cursor: pointer;
-      background-color: darkslateblue; }
-    #print-section .print-area button i {
-      font-size: 80px; }
+    background-color: #09c7e0; }
+
+#send-section .send-area {
+  display: flex;
+  justify-content: center; }
+  #send-section .send-area button {
+    background-color: #42ce42; }
 
 /****************************************************/
 /********************************** END OF HEADER **************/
