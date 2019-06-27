@@ -1,3 +1,4 @@
+
 // Align Text Left
 const makeLeft = () => {
     page_text.style.textAlign = "left";
