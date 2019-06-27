@@ -7,7 +7,7 @@
         <link href="../src/css/index.css" type="text/css" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css?family=Aguafina+Script|Indie+Flower|Pacifico|Playfair+Display+SC|Righteous|Roboto|Rubik+Mono+One&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/9c3656a23f.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     </head>
     <body>
 
@@ -91,7 +91,7 @@
             <!-- The Print Section -->
             <section id="print-section" class="editor-sections">
                 <div class="print-area">
-                    <button><i class="fas fa-print"></i></button>
+                    <button><i class="fas fa-print" id="printButton"></i></button>
                 </div>
                 <div class="edit-boxes-footer">
                     <p>Print</p>
@@ -102,11 +102,11 @@
 
         <!-- The Actual Document Area. This is where the Sheet Resides -->
         <section id="document-section">
-            <div class="page">
-                <div id="doc-text-area">
-                    <textarea colspan="60" rows="63" maxlength="4500"></textarea>
+                <div class="page">
+                    <div id="doc-text-area" id="printableArea">
+                        <textarea colspan="60" rows="63" maxlength="4500"></textarea>
+                    </div>
                 </div>
-            </div>
         </section>
 
 
@@ -120,6 +120,6 @@
             </div>
         </footer>
         
-        <script src="../dist/bundle.js"></script>
+        <script src="../src/js/index.js"></script>
     </body>
 </html>

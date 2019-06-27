@@ -1,3 +1,4 @@
+
 // Getting the font selector options
 let font_family_options = document.querySelectorAll("#font-selector-area select");
 
