@@ -35,10 +35,12 @@ header {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    font-size: 12px; }
+    font-size: 12px;
+    width: 80px; }
 
 header .buttons {
   width: 100px;
+  height: 50px;
   border: 5px solid #098899;
   border-radius: 5px;
   color: white;
@@ -48,12 +50,19 @@ header .buttons {
   transition: .3s ease; }
   header .buttons:hover {
     cursor: pointer;
-    color: grey; }
+    color: gold; }
   header .buttons i {
-    font-size: 50px; }
+    font-size: 20px; }
+
+@media only screen and (max-width: 1090px) {
+  header .buttons {
+    width: 100%; } }
 
 /************** END OF GLOBAL STYLES ***************************/
 /*** THE FONT SECTION ***************/
+#font-section #font-selector-area {
+  margin-bottom: 39px; }
+
 #font-section #font-style-area {
   width: 100px;
   margin: auto;
@@ -93,8 +102,7 @@ header .buttons {
     flex-direction: column; }
   #styles-section .styles-area {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; }
+    flex-direction: row; }
     #styles-section .styles-area div {
       width: 100px;
       height: 45px;
@@ -111,19 +119,33 @@ header .buttons {
       #styles-section .styles-area div p {
         margin: 0; }
 
+@media only screen and (max-width: 1090px) {
+  #styles-section .styles-area div {
+    width: 70px; } }
+
 /************ END OF STYLES SECTION *************************/
 /*** START OF PRINT SECTION ******/
-#print-section .print-area {
-  display: flex;
-  justify-content: center; }
-  #print-section .print-area button {
-    background-color: #09c7e0; }
+#print-section {
+  width: 80px; }
+  #print-section .print-area {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    #print-section .print-area button {
+      background-color: #09c7e0; }
+      #print-section .print-area button:hover {
+        background-color: #3a2561; }
 
-#send-section .send-area {
-  display: flex;
-  justify-content: center; }
-  #send-section .send-area button {
-    background-color: #42ce42; }
+#send-section {
+  width: 80px; }
+  #send-section .send-area {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    #send-section .send-area button {
+      background-color: #42ce42; }
+      #send-section .send-area button:hover {
+        background-color: #3a2561; }
 
 /****************************************************/
 /********************************** END OF HEADER **************/
