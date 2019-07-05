@@ -23,6 +23,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;
 }
 // Global Styles for the Editor
 .editor-sections {
@@ -39,6 +40,32 @@ header {
         padding: 0;
         font-family: sans-serif;
         font-size: 12px;
+        width: 80px;
+    }
+}
+header .buttons {
+    width: 100px;
+    height: 50px;
+    border: 5px solid $printButtonBorder;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    -moz-transition: .3s ease;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    &:hover {
+        cursor: pointer;
+        color: gold;
+    }
+    i {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 1090px) {
+    header {
+        .buttons {
+            width: 100%;
+        }
     }
 }
 /************** END OF GLOBAL STYLES ***************************/
@@ -46,7 +73,9 @@ header {
 
 /*** THE FONT SECTION ***************/
 #font-section {
-
+#font-selector-area {
+    margin-bottom: 39px;
+}
 #font-style-area {
     width: 100px;
     margin: auto;
@@ -99,7 +128,6 @@ header {
     .styles-area {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
         div {
             width: 100px;
             height: 45px;
@@ -120,29 +148,42 @@ header {
         }
     }
 }
+@media only screen and (max-width: 1090px) {
+    #styles-section {
+        .styles-area {
+            div {
+                width: 70px;
+            }
+        }
+    }
+}
 /************ END OF STYLES SECTION *************************/
 
 /*** START OF PRINT SECTION ******/
 #print-section {
+    width: 80px;
     .print-area {
+        width: 100%;
         display: flex;
         justify-content: center;
         button {
-            width: 100px;
-            border: 5px solid $printButtonBorder;
-            border-radius: 5px;
             background-color: $printButtonBackground;
-            color: white;
-            text-align: center;
-            -moz-transition: .3s ease;
-            -webkit-transition: .3s ease;
-            transition: .3s ease;
             &:hover {
-                cursor: pointer;
-                background-color: darkslateblue;
+                background-color: #3a2561;
             }
-            i {
-                font-size: 80px;
+        }
+    }
+}
+#send-section {
+    width: 80px;
+    .send-area {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        button {
+            background-color: $sendButtonBackground;
+            &:hover {
+                background-color: #3a2561;
             }
         }
     }
@@ -163,12 +204,13 @@ header {
         background-color: $documentSheet;
         box-shadow: 0px 0px 8px 0px $documentBorder;
         #doc-text-area {
-            width: 100%;
-            //border: 1px dashed red; ---For Testing
+            max-height: 962.6px;
+            width: 700px;
+            margin: 50px;
+            position: absolute;
             textarea {
                 max-height: 961.6px;
-                width: 700px;
-                margin: 50px;
+                width: 100%;
                 border: none;
                 resize: none;
                 overflow: hidden;
