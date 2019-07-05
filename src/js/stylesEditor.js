@@ -1,5 +1,5 @@
 
-
+// Functions for spacing for the text.
 const addNormalSpacing = () => {
     page_text.style.lineHeight = normal_spacing;
     styles_boxes[0].style.backgroundColor = highlightColor;

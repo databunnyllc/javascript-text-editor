@@ -3,11 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../src/images/favicon.png"/>
         <title>Documents</title>
         <link href="../src/css/index.css" type="text/css" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css?family=Aguafina+Script|Indie+Flower|Pacifico|Playfair+Display+SC|Righteous|Roboto|Rubik+Mono+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Aguafina+Script|Indie+Flower|Pacifico|Playfair+Display+SC|Righteous|Roboto|Rubik+Mono+One|Merriweather|Literata&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/9c3656a23f.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     </head>
     <body>
 
@@ -20,6 +21,7 @@
                         <option value="Arial" selected>Arial</option>
                         <option value="Times New Roman">Times New Roman</option>
                         <option value="Courier">Courier</option>
+                        <option value="Literata">Literata</option>
                         <option value="Comic Sans MS">Comic Sans MS</option>
                         <option value="Aguafina Script">Aguafina Script</option>
                         <option value="Indie Flower">Indie Flower</option>
@@ -27,6 +29,8 @@
                         <option value="Playfair Display SC">Playfair Display SC</option>
                         <option value="Righteous">Righteous</option>
                         <option value="Roboto">Roboto</option>
+                        <option value="Rubik Mono One">Rubik Mono One</option>
+                        <option value="Merriweather">Merriweather</option>
                     </select>
                     <select>
                         <option value="6pt">6pt</option>
@@ -45,9 +49,9 @@
                     </select>
                 </div>
                 <div id="font-style-area">
-                    <div><b>B</b></div>
+                    <!--<div><b>B</b></div>
                     <div><i>I</i></div>
-                    <div><u>U</u></div>
+                    <div><u>U</u></div>-->
                 </div>
                 <div class="edit-boxes-footer">
                     <p>Font</p>
@@ -87,17 +91,42 @@
                     <p>Styles</p>
                 </div>
             </section>
+
+            <!-- The Print Section -->
+            <section id="print-section" class="editor-sections">
+                <div class="print-area">
+                    <button class="buttons"><i class="fas fa-print"></i></button>
+                </div>
+                <div class="edit-boxes-footer">
+                    <p>Print</p>
+                </div>
+            </section>
+
+            <form action="mailto:chrisleveston@gmail.com" 
+                  method="POST" 
+                  enctype="multipart/form-data" 
+                  name="documentEmail">
+            <!-- The Send Section -->
+            <section id="send-section" class="editor-sections">
+                <div class="send-area">
+                    <button type="submit" class="buttons"><i class="fas fa-paper-plane"></i></button>
+                </div>
+                <div class="edit-boxes-footer">
+                    <p>Send</p>
+                </div>
+            </section>
         </header>
 
 
         <!-- The Actual Document Area. This is where the Sheet Resides -->
         <section id="document-section">
-            <div class="page">
-                <div id="doc-text-area">
-                    <textarea colspan="60" rows="63" maxlength="4500"></textarea>
+                <div class="page">
+                    <div id="doc-text-area">
+                        <textarea colspan="60" rows="63" maxlength="4500"></textarea>
+                    </div>
                 </div>
-            </div>
         </section>
+    </form>
 
 
         <!-- Footer where Pages are Counted -->
@@ -106,14 +135,10 @@
                 <p>Page 0 of 0</p>
             </div>
             <div class="letter-counter-area">
-                <p>Letter Count: <span></span></p>
+                <p>Letter Count: <span><!--The count number--></span></p>
             </div>
         </footer>
         
-        <script src="../src/js/variables.js"></script>
-        <script src="../src/js/fontEditor.js"></script>
-        <script src="../src/js/stylesEditor.js"></script>
-        <script src="../src/js/paragraphEditor.js"></script>
-        <script src="../src/js/letter-counter.js"></script>
+        <script src="../src/js/index.js"></script>
     </body>
 </html>

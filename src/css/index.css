@@ -20,7 +20,8 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0; }
+  right: 0;
+  z-index: 1; }
 
 .editor-sections {
   border-right: 1px solid grey; }
@@ -34,10 +35,34 @@ header {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    font-size: 12px; }
+    font-size: 12px;
+    width: 80px; }
+
+header .buttons {
+  width: 100px;
+  height: 50px;
+  border: 5px solid #098899;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  -moz-transition: .3s ease;
+  -webkit-transition: .3s ease;
+  transition: .3s ease; }
+  header .buttons:hover {
+    cursor: pointer;
+    color: gold; }
+  header .buttons i {
+    font-size: 20px; }
+
+@media only screen and (max-width: 1090px) {
+  header .buttons {
+    width: 100%; } }
 
 /************** END OF GLOBAL STYLES ***************************/
 /*** THE FONT SECTION ***************/
+#font-section #font-selector-area {
+  margin-bottom: 39px; }
+
 #font-section #font-style-area {
   width: 100px;
   margin: auto;
@@ -77,8 +102,7 @@ header {
     flex-direction: column; }
   #styles-section .styles-area {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; }
+    flex-direction: row; }
     #styles-section .styles-area div {
       width: 100px;
       height: 45px;
@@ -95,13 +119,40 @@ header {
       #styles-section .styles-area div p {
         margin: 0; }
 
+@media only screen and (max-width: 1090px) {
+  #styles-section .styles-area div {
+    width: 70px; } }
+
 /************ END OF STYLES SECTION *************************/
+/*** START OF PRINT SECTION ******/
+#print-section {
+  width: 80px; }
+  #print-section .print-area {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    #print-section .print-area button {
+      background-color: #09c7e0; }
+      #print-section .print-area button:hover {
+        background-color: #3a2561; }
+
+#send-section {
+  width: 80px; }
+  #send-section .send-area {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    #send-section .send-area button {
+      background-color: #42ce42; }
+      #send-section .send-area button:hover {
+        background-color: #3a2561; }
+
+/****************************************************/
 /********************************** END OF HEADER **************/
 #document-section {
-  margin-top: 20px;
   margin-bottom: 100px;
   width: 100%;
-  margin-top: 100px; }
+  margin-top: 130px; }
   #document-section .page {
     width: 816px;
     height: 1056px;
@@ -109,11 +160,13 @@ header {
     background-color: white;
     box-shadow: 0px 0px 8px 0px #808080; }
     #document-section .page #doc-text-area {
-      width: 100%; }
+      max-height: 962.6px;
+      width: 700px;
+      margin: 50px;
+      position: absolute; }
       #document-section .page #doc-text-area textarea {
         max-height: 961.6px;
-        width: 700px;
-        margin: 50px;
+        width: 100%;
         border: none;
         resize: none;
         overflow: hidden; }
